@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferrari SportCar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        background-color: #121212;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      /* Navigation Bar */
+      nav {
+        background: #000;
+        color: #fff;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        position: sticky;
+        top: 0;
+      }
+
+      nav .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #e10600;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+      }
+
+      nav .logo:hover {
+        transform: scale(1.1);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 0 20px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 400;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #e10600;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url("https://www.edmunds.com/assets/m/cs/bltb62aea72505aec46/6711492c0bdb93ff29e157b7/Ferrari_F80_12_crop_16_9_41737618-7364-4b89-8763-043e5561e66d_1600.jpg")
+          no-repeat center center/cover;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+
+      .hero:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+      }
+
+      .hero div {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: #e10600;
+        letter-spacing: 2px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 30px;
+      }
+
+      .hero button {
+        padding: 15px 30px;
+        font-size: 1rem;
+        color: #fff;
+        background: #e10600;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      .hero button:hover {
+        background: #b10500;
+      }
+
+      /* Models Section */
+      .models {
+        padding: 5px 200px;
+        background: #1c1c1c;
+      }
+
+      .models h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #e10600;
+        margin-bottom: 40px;
+      }
+
+      .models-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .model-card {
+        background: #292929;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .model-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+      }
+
+      .model-card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .model-card h3 {
+        font-size: 1.5rem;
+        color: #e10600;
+        margin: 15px 0;
+      }
+
+      .model-card p {
+        font-size: 1rem;
+        font-family: "Roboto", sans-serif;
+        color: #ccc;
+      }
+
+      /* Footer */
+      footer {
+        background: #000;
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+        border-top: 2px solid #e10600;
+      }
+
+      footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      footer ul li {
+        margin: 0 15px;
+      }
+
+      footer ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      footer ul li a:hover {
+        color: #e10600;
+      }
+
+      footer p {
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="#" class="logo">UNLEASH</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Models</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div>
+        <h1>Unleash the power</h1>
+        <p>Drive innovation and speed like never before.</p>
+        <button>Discover More</button>
+      </div>
+    </section>
+
+    <!-- Models Section -->
+    <section class="models">
+      <h2>Model Selection</h2>
+      <div class="models-grid">
+        <div class="model-card">
+          <img
+            src="https://www.exclusiveautomotivegroup.com/imagetag/3770/main/l/Used-2021-Ferrari-SF90-Stradale-Novitec-1694798333.jpg"
+            height="350px"
+            width="200px"
+            alt="Model 1"
+          />
+          <h3>Ferrari SF90</h3>
+          <p>The ultimate hybrid sports car experience.</p>
+        </div>
+        <div class="model-card">
+          <img
+            src="https://www.topgear.com/sites/default/files/2023/09/1%20Ferrari%20Roma%20Spider.jpg"
+            height="350px"
+            width="200px"
+            alt="Model 2"
+          />
+          <h3>Ferrari Roma</h3>
+          <p>Elegance and performance redefined.</p>
+        </div>
+        <div class="model-card">
+          <img
+            src="https://cdn.ferrari.com/cms/network/media/img/resize/5f620f2810313d0ac518254d-ferrari-portofino-m-social-card-cover-intro-new?width=1080"
+            height="350px"
+            width="200px"
+            alt="Model 3"
+          />
+          <h3>Ferrari Portofino</h3>
+          <p>A perfect blend of luxury and power.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Models</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p>&copy; 2025 Ferrari Inspired. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
